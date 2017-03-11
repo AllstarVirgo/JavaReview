@@ -1,0 +1,425 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gbk2312" />
+<title>深圳证券交易所</title>
+<link href="images2008/xxpl.css" rel="stylesheet" type="text/css" />
+<script language="javascript" src="images2008/default.js"></script>
+<SCRIPT src="js/general.js" type="text/javascript"></SCRIPT>
+<SCRIPT src="js/dateFormat.js" type="text/javascript"></SCRIPT>
+<SCRIPT src="js/search.js" type="text/javascript"></SCRIPT>
+<link rel ="Stylesheet" type ="text/css" href ="css/suggest.css" />
+<script type ="text/javascript" src ="js/Suggest.js"></script>
+<script type ="text/javascript" src ="js/stocklist_zb_zxb.js"></script>
+    <script type ="text/javascript" >
+if (document.all){ 
+window.attachEvent('onload',StockList); 
+} 
+else{ 
+window.addEventListener('load',StockList,false); 
+}
+        function StockList() {
+            this.stockCode = document .getElementById('stockCode');
+            if (this.stockCode) {
+                var suggestUrl = "";
+                var suggestStock = new Suggest(suggestUrl);
+                suggestStock.bind(this.stockCode);
+            }
+        }    
+    </script>
+    <SCRIPT type="text/JavaScript">
+				<!--
+				function checkform2(theForm)
+				{
+					if (theForm.inputname.value == "")
+					{
+						alert("证券代码或简称!");
+						theForm.inputname.focus();
+						return (false);
+					}
+					
+					return true;
+				}
+				//-->
+				</SCRIPT>
+</HEAD>
+<SCRIPT language="javascript">
+<!--
+var pageCount=29
+//-->
+</SCRIPT>
+<BODY>
+<div class="main">
+ <script language="javascript" src="http://www.szse.cn/main/disclosure_js/main/top.js"></script>
+  <div class="content"> 
+  <script language="javascript" src="http://www.szse.cn/main/disclosure_js/main/left.js"></script>
+	<div class="index">
+      <table width="100%" border="0" align="left" cellpadding="0" cellspacing="0">
+        <tr>
+          <td><table width="748" border="0" cellspacing="0" cellpadding="0" class="bor1">
+              <tr >
+                <td height="36"><form id="queryHistoryForm" name="queryHistoryForm" method="post"
+													action='search0425.jsp' onSubmit="return queryHistory();"><input
+													type="hidden" name="leftid" value="1"> <input
+													type="hidden" name="lmid" value="drgg">
+												<input type="hidden" name="pageNo" 
+												value="1"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td width="22" style="padding-left:6px;"><span class="td10"><img 
+                              src="images2008/xxpl_24.gif" width="15" height="15" 
+                              border="0" /></span></td>
+                      <td width="57"><font color="#223c94">公告查询</font></td>
+                      <td width="2" ><img src="images2008/line01.gif" /></td>
+																		<td width="205" align="left" style="padding-left:6px;">
+																			<input id="stockCode" name="stockCode" type="text" title="证券代码或简称" value='证券代码或简称' onFocus="this.select()" onClick="if(this.value=='证券代码或简称')this.value=''"
+onMouseOver="this.focus()" onMouseOut="if(this.value=='')this.value='证券代码或简称';" class="in01"/>
+																		<input id="search" name="keyword" type="text" onFocus="this.select()" onClick="if(this.value=='请输入关键字')this.value=''"
+onMouseOver="this.focus()" onMouseOut="if(this.value=='')this.value='请输入关键字';" value="请输入关键字" class="in01"/></td>
+																		<td valign="bottom"><select name="noticeType" class="select01" style="margin-top:1px;*margin-top:2px;width:176px;">
+						                		<option value="">----请选择公告类型----</option>
+																<option value="010301" >年度报告</option>
+																<option value="010303" >半年度报告</option>
+																<option value="010305" >一季度报告</option>
+																<option value="010307" >三季度报告</option>
+																<option value="0102" >首次公开发行及上市</option>
+																<option value="0105" >配股</option>
+																<option value="0107" >增发</option>
+																<option value="0109" >可转换债券</option>
+																<option value="0110" >权证相关公告</option>
+																<option value="0111" >其它融资</option>
+																<option value="0113"  title="权益分派及限制出售股份上市">权益分派及限制出售股份上市</option>
+																<option value="0115" >股权变动</option>
+																<option value="0117" >交易</option>
+																<option value="0119" >股东大会</option>
+																<option value="0121"  title="澄清、风险提示、业绩预告事项">澄清、风险提示、业绩预告事项</option>
+																<option value="0125" >特别处理和退市</option>
+																<option value="0127" >补充及更正</option>
+																<option value="0129" >中介机构报告</option>
+																<option value="0131" >上市公司制度</option>
+																<option value="0123" >其它重大事项</option>
+																</select></td>
+																		<td width="92"><input  id="search" name="startTime" type="text" value="2017-03-09"  onblur="blurJD()" onclick="getcalendar(this, 'yyyy-mm-dd')" onfocus="this.select();" class="in02"/></td>
+																		<td width="18" align="center" class="blue71">至</td>
+																		<td width="93"><input  id="search" name="endTime" type="text" value="2017-03-09"  onblur="blurJD()" onclick="getcalendar(this, 'yyyy-mm-dd')"  onfocus="this.select();" class="in02"/></td>
+																		<td><input type="image" name="imageField" src="images2008/button_qd.gif" /></td>																		
+																</tr>
+                  </table></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr>
+          <td height="13"></td>
+        </tr>         
+        <tr>
+          <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                             <td width="101" height="30" class="yellow_bt14 botborder ">上市公司公告</td>				
+														 </tr>
+                  </table></td>
+              </tr>
+              <tr>
+                <td align="center" style="padding-top:10px;"><table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td align="left"><table width="98%" 
+border="0" align="right" cellpadding="0" cellspacing="0">
+                          <tbody>
+																	
+																	<tr>
+																		<td class='td1'></td>
+																		<td align='left' class='td2'><a href='finalpage/2017-03-09/1203142474.PDF'
+																			target="new">中航地产：独立董事关于公司有关事项的专项说明和独立意见</a>&nbsp;&nbsp;&nbsp;<img width="19" height="21" border="0"  src="images2008/pdf.jpg"  onerror="this.src='images2008/otherfile.jpg'"/>
+																		<font color="#999999">(106k)</font><span
+																			class='link1'>[2017-03-09]</span></td>
+																	</tr>
+
+																	
+																	<tr>
+																		<td class='td1'></td>
+																		<td align='left' class='td2'><a href='finalpage/2017-03-09/1203142475.PDF'
+																			target="new">中航地产：关于2016年度关联交易事项的公告</a>&nbsp;&nbsp;&nbsp;<img width="19" height="21" border="0"  src="images2008/pdf.jpg"  onerror="this.src='images2008/otherfile.jpg'"/>
+																		<font color="#999999">(287k)</font><span
+																			class='link1'>[2017-03-09]</span></td>
+																	</tr>
+
+																	
+																	<tr>
+																		<td class='td1'></td>
+																		<td align='left' class='td2'><a href='finalpage/2017-03-09/1203142476.PDF'
+																			target="new">中航地产：关于2017年日常关联交易预计发生额的公告</a>&nbsp;&nbsp;&nbsp;<img width="19" height="21" border="0"  src="images2008/pdf.jpg"  onerror="this.src='images2008/otherfile.jpg'"/>
+																		<font color="#999999">(335k)</font><span
+																			class='link1'>[2017-03-09]</span></td>
+																	</tr>
+
+																	
+																	<tr>
+																		<td class='td1'></td>
+																		<td align='left' class='td2'><a href='finalpage/2017-03-09/1203142477.PDF'
+																			target="new">中航地产：关于对中航工业集团财务有限责任公司的风险持续评估报告</a>&nbsp;&nbsp;&nbsp;<img width="19" height="21" border="0"  src="images2008/pdf.jpg"  onerror="this.src='images2008/otherfile.jpg'"/>
+																		<font color="#999999">(160k)</font><span
+																			class='link1'>[2017-03-09]</span></td>
+																	</tr>
+
+																	
+																	<tr>
+																		<td class='td1'></td>
+																		<td align='left' class='td2'><a href='finalpage/2017-03-09/1203142481.PDF'
+																			target="new">中航地产：关于对子公司贷款提供担保的公告</a>&nbsp;&nbsp;&nbsp;<img width="19" height="21" border="0"  src="images2008/pdf.jpg"  onerror="this.src='images2008/otherfile.jpg'"/>
+																		<font color="#999999">(107k)</font><span
+																			class='link1'>[2017-03-09]</span></td>
+																	</tr>
+
+																	
+																	<tr>
+																		<td class='td1'></td>
+																		<td align='left' class='td2'><a href='finalpage/2017-03-09/1203142478.PDF'
+																			target="new">中航地产：关于公司非经营性资金占用及其他关联资金往来情况汇总表的专项审核报告</a>&nbsp;&nbsp;&nbsp;<img width="19" height="21" border="0"  src="images2008/pdf.jpg"  onerror="this.src='images2008/otherfile.jpg'"/>
+																		<font color="#999999">(5047k)</font><span
+																			class='link1'>[2017-03-09]</span></td>
+																	</tr>
+
+																	
+																	<tr>
+																		<td class='td1'></td>
+																		<td align='left' class='td2'><a href='finalpage/2017-03-09/1203142479.PDF'
+																			target="new">中航地产：关于公司在中航财务有限公司存贷款业务情况的专项审核报告</a>&nbsp;&nbsp;&nbsp;<img width="19" height="21" border="0"  src="images2008/pdf.jpg"  onerror="this.src='images2008/otherfile.jpg'"/>
+																		<font color="#999999">(1025k)</font><span
+																			class='link1'>[2017-03-09]</span></td>
+																	</tr>
+
+																	
+																	<tr>
+																		<td class='td1'></td>
+																		<td align='left' class='td2'><a href='finalpage/2017-03-09/1203142480.PDF'
+																			target="new">中航地产：内部控制审计报告</a>&nbsp;&nbsp;&nbsp;<img width="19" height="21" border="0"  src="images2008/pdf.jpg"  onerror="this.src='images2008/otherfile.jpg'"/>
+																		<font color="#999999">(675k)</font><span
+																			class='link1'>[2017-03-09]</span></td>
+																	</tr>
+
+																	
+																	<tr>
+																		<td class='td1'></td>
+																		<td align='left' class='td2'><a href='finalpage/2017-03-09/1203142597.PDF'
+																			target="new">康达尔：关于公司股东临时提案的法律意见书</a>&nbsp;&nbsp;&nbsp;<img width="19" height="21" border="0"  src="images2008/pdf.jpg"  onerror="this.src='images2008/otherfile.jpg'"/>
+																		<font color="#999999">(2165k)</font><span
+																			class='link1'>[2017-03-09]</span></td>
+																	</tr>
+
+																	
+																	<tr>
+																		<td class='td1'></td>
+																		<td align='left' class='td2'><a href='finalpage/2017-03-09/1203142596.PDF'
+																			target="new">康达尔：关于收到股东临时提案事项的公告</a>&nbsp;&nbsp;&nbsp;<img width="19" height="21" border="0"  src="images2008/pdf.jpg"  onerror="this.src='images2008/otherfile.jpg'"/>
+																		<font color="#999999">(339k)</font><span
+																			class='link1'>[2017-03-09]</span></td>
+																	</tr>
+
+																	
+																	<tr>
+																		<td class='td1'></td>
+																		<td align='left' class='td2'><a href='finalpage/2017-03-09/1203141080.PDF'
+																			target="new">深天马Ａ：重大资产重组停牌进展公告</a>&nbsp;&nbsp;&nbsp;<img width="19" height="21" border="0"  src="images2008/pdf.jpg"  onerror="this.src='images2008/otherfile.jpg'"/>
+																		<font color="#999999">(149k)</font><span
+																			class='link1'>[2017-03-09]</span></td>
+																	</tr>
+
+																	
+																	<tr>
+																		<td class='td1'></td>
+																		<td align='left' class='td2'><a href='finalpage/2017-03-09/1203141863.PDF'
+																			target="new">深圳华强：2016年度内部控制评价报告</a>&nbsp;&nbsp;&nbsp;<img width="19" height="21" border="0"  src="images2008/pdf.jpg"  onerror="this.src='images2008/otherfile.jpg'"/>
+																		<font color="#999999">(193k)</font><span
+																			class='link1'>[2017-03-09]</span></td>
+																	</tr>
+
+																	
+																	<tr>
+																		<td class='td1'></td>
+																		<td align='left' class='td2'><a href='finalpage/2017-03-09/1203141857.PDF'
+																			target="new">深圳华强：2016年年度报告</a>&nbsp;&nbsp;&nbsp;<img width="19" height="21" border="0"  src="images2008/pdf.jpg"  onerror="this.src='images2008/otherfile.jpg'"/>
+																		<font color="#999999">(3258k)</font><span
+																			class='link1'>[2017-03-09]</span></td>
+																	</tr>
+
+																	
+																	<tr>
+																		<td class='td1'></td>
+																		<td align='left' class='td2'><a href='finalpage/2017-03-09/1203141856.PDF'
+																			target="new">深圳华强：2016年年度报告摘要</a>&nbsp;&nbsp;&nbsp;<img width="19" height="21" border="0"  src="images2008/pdf.jpg"  onerror="this.src='images2008/otherfile.jpg'"/>
+																		<font color="#999999">(335k)</font><span
+																			class='link1'>[2017-03-09]</span></td>
+																	</tr>
+
+																	
+																	<tr>
+																		<td class='td1'></td>
+																		<td align='left' class='td2'><a href='finalpage/2017-03-09/1203141877.PDF'
+																			target="new">深圳华强：2016年年度审计报告</a>&nbsp;&nbsp;&nbsp;<img width="19" height="21" border="0"  src="images2008/pdf.jpg"  onerror="this.src='images2008/otherfile.jpg'"/>
+																		<font color="#999999">(21334k)</font><span
+																			class='link1'>[2017-03-09]</span></td>
+																	</tr>
+
+																	
+																	<tr>
+																		<td class='td1'></td>
+																		<td align='left' class='td2'><a href='finalpage/2017-03-09/1203141868.PDF'
+																			target="new">深圳华强：2016年投资者保护工作情况报告</a>&nbsp;&nbsp;&nbsp;<img width="19" height="21" border="0"  src="images2008/pdf.jpg"  onerror="this.src='images2008/otherfile.jpg'"/>
+																		<font color="#999999">(217k)</font><span
+																			class='link1'>[2017-03-09]</span></td>
+																	</tr>
+
+																	
+																	<tr>
+																		<td class='td1'></td>
+																		<td align='left' class='td2'><a href='finalpage/2017-03-09/1203141865.PDF'
+																			target="new">深圳华强：2017年日常关联交易预计的公告</a>&nbsp;&nbsp;&nbsp;<img width="19" height="21" border="0"  src="images2008/pdf.jpg"  onerror="this.src='images2008/otherfile.jpg'"/>
+																		<font color="#999999">(570k)</font><span
+																			class='link1'>[2017-03-09]</span></td>
+																	</tr>
+
+																	
+																	<tr>
+																		<td class='td1'></td>
+																		<td align='left' class='td2'><a href='finalpage/2017-03-09/1203141864.PDF'
+																			target="new">深圳华强：董事会关于募集资金2016年年度存放与使用情况的专项报告</a>&nbsp;&nbsp;&nbsp;<img width="19" height="21" border="0"  src="images2008/pdf.jpg"  onerror="this.src='images2008/otherfile.jpg'"/>
+																		<font color="#999999">(256k)</font><span
+																			class='link1'>[2017-03-09]</span></td>
+																	</tr>
+
+																	
+																	<tr>
+																		<td class='td1'></td>
+																		<td align='left' class='td2'><a href='finalpage/2017-03-09/1203141858.PDF'
+																			target="new">深圳华强：董事会决议公告</a>&nbsp;&nbsp;&nbsp;<img width="19" height="21" border="0"  src="images2008/pdf.jpg"  onerror="this.src='images2008/otherfile.jpg'"/>
+																		<font color="#999999">(166k)</font><span
+																			class='link1'>[2017-03-09]</span></td>
+																	</tr>
+
+																	
+																	<tr>
+																		<td class='td1'></td>
+																		<td align='left' class='td2'><a href='finalpage/2017-03-09/1203141871.PDF'
+																			target="new">深圳华强：独立董事2016年度述职报告</a>&nbsp;&nbsp;&nbsp;<img width="19" height="21" border="0"  src="images2008/pdf.jpg"  onerror="this.src='images2008/otherfile.jpg'"/>
+																		<font color="#999999">(131k)</font><span
+																			class='link1'>[2017-03-09]</span></td>
+																	</tr>
+
+																	
+																	<tr>
+																		<td class='td1'></td>
+																		<td align='left' class='td2'><a href='finalpage/2017-03-09/1203141872.PDF'
+																			target="new">深圳华强：独立董事2016年年度报告专项说明及独立意见</a>&nbsp;&nbsp;&nbsp;<img width="19" height="21" border="0"  src="images2008/pdf.jpg"  onerror="this.src='images2008/otherfile.jpg'"/>
+																		<font color="#999999">(176k)</font><span
+																			class='link1'>[2017-03-09]</span></td>
+																	</tr>
+
+																	
+																	<tr>
+																		<td class='td1'></td>
+																		<td align='left' class='td2'><a href='finalpage/2017-03-09/1203141862.PDF'
+																			target="new">深圳华强：非经营性资金占用及其他关联资金往来情况的专项审计说明</a>&nbsp;&nbsp;&nbsp;<img width="19" height="21" border="0"  src="images2008/pdf.jpg"  onerror="this.src='images2008/otherfile.jpg'"/>
+																		<font color="#999999">(1550k)</font><span
+																			class='link1'>[2017-03-09]</span></td>
+																	</tr>
+
+																	
+																	<tr>
+																		<td class='td1'></td>
+																		<td align='left' class='td2'><a href='finalpage/2017-03-09/1203141870.PDF'
+																			target="new">深圳华强：公司在深圳华强集团财务有限公司办理存贷款业务的持续风险评估报告</a>&nbsp;&nbsp;&nbsp;<img width="19" height="21" border="0"  src="images2008/pdf.jpg"  onerror="this.src='images2008/otherfile.jpg'"/>
+																		<font color="#999999">(357k)</font><span
+																			class='link1'>[2017-03-09]</span></td>
+																	</tr>
+
+																	
+																	<tr>
+																		<td class='td1'></td>
+																		<td align='left' class='td2'><a href='finalpage/2017-03-09/1203141876.PDF'
+																			target="new">深圳华强：公司在深圳华强集团财务有限公司贷款业务情况的专项审核报告</a>&nbsp;&nbsp;&nbsp;<img width="19" height="21" border="0"  src="images2008/pdf.jpg"  onerror="this.src='images2008/otherfile.jpg'"/>
+																		<font color="#999999">(2299k)</font><span
+																			class='link1'>[2017-03-09]</span></td>
+																	</tr>
+
+																	
+																	<tr>
+																		<td class='td1'></td>
+																		<td align='left' class='td2'><a href='finalpage/2017-03-09/1203141869.PDF'
+																			target="new">深圳华强：关于2016年度购买银行理财产品的专项说明</a>&nbsp;&nbsp;&nbsp;<img width="19" height="21" border="0"  src="images2008/pdf.jpg"  onerror="this.src='images2008/otherfile.jpg'"/>
+																		<font color="#999999">(292k)</font><span
+																			class='link1'>[2017-03-09]</span></td>
+																	</tr>
+
+																	
+																	<tr>
+																		<td class='td1'></td>
+																		<td align='left' class='td2'><a href='finalpage/2017-03-09/1203141866.PDF'
+																			target="new">深圳华强：关于公司使用自有闲置资金购买银行理财产品的公告</a>&nbsp;&nbsp;&nbsp;<img width="19" height="21" border="0"  src="images2008/pdf.jpg"  onerror="this.src='images2008/otherfile.jpg'"/>
+																		<font color="#999999">(163k)</font><span
+																			class='link1'>[2017-03-09]</span></td>
+																	</tr>
+
+																	
+																	<tr>
+																		<td class='td1'></td>
+																		<td align='left' class='td2'><a href='finalpage/2017-03-09/1203141867.PDF'
+																			target="new">深圳华强：关于续聘2017年度审计机构的公告</a>&nbsp;&nbsp;&nbsp;<img width="19" height="21" border="0"  src="images2008/pdf.jpg"  onerror="this.src='images2008/otherfile.jpg'"/>
+																		<font color="#999999">(146k)</font><span
+																			class='link1'>[2017-03-09]</span></td>
+																	</tr>
+
+																	
+																	<tr>
+																		<td class='td1'></td>
+																		<td align='left' class='td2'><a href='finalpage/2017-03-09/1203141859.PDF'
+																			target="new">深圳华强：关于召开2016年年度股东大会的通知</a>&nbsp;&nbsp;&nbsp;<img width="19" height="21" border="0"  src="images2008/pdf.jpg"  onerror="this.src='images2008/otherfile.jpg'"/>
+																		<font color="#999999">(348k)</font><span
+																			class='link1'>[2017-03-09]</span></td>
+																	</tr>
+
+																	
+																	<tr>
+																		<td class='td1'></td>
+																		<td align='left' class='td2'><a href='finalpage/2017-03-09/1203141861.PDF'
+																			target="new">深圳华强：监事会决议公告</a>&nbsp;&nbsp;&nbsp;<img width="19" height="21" border="0"  src="images2008/pdf.jpg"  onerror="this.src='images2008/otherfile.jpg'"/>
+																		<font color="#999999">(172k)</font><span
+																			class='link1'>[2017-03-09]</span></td>
+																	</tr>
+
+																	
+																	<tr>
+																		<td class='td1'></td>
+																		<td align='left' class='td2'><a href='finalpage/2017-03-09/1203141874.PDF'
+																			target="new">深圳华强：募集资金年度存放与使用情况鉴证报告</a>&nbsp;&nbsp;&nbsp;<img width="19" height="21" border="0"  src="images2008/pdf.jpg"  onerror="this.src='images2008/otherfile.jpg'"/>
+																		<font color="#999999">(2907k)</font><span
+																			class='link1'>[2017-03-09]</span></td>
+																	</tr>
+
+																	
+                                  </tbody></table></td></tr>
+              <tr >
+              	<td height="40" align="left" class="page12"><table width="526" border="0" align="left" cellpadding="0" cellspacing="0">
+                	<tr>
+                  	<td width="180">&nbsp;</td>
+                    <td>当前第 <span>2</span> 页  共 <span>29</span> 页</td>
+                    <td><a href="javascript:goPage(1)"><img src="images2008/page.gif" /></a>&nbsp;<a href="javascript:goPage(3)"><img src="images2008/next.gif" /></a></td>
+                    <td>转到 <input name='tzy' class='input_top_bar' type='text' size='3' onkeydown="javascript:goPage(this.value)">页</td>
+                  </tr></table></td>
+                  </tr></table></td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+              </tr>
+            </table></td>
+        </tr>
+      </table>
+    </div>
+  <script language="javascript" src="http://www.szse.cn/main/disclosure_js/main/bottom.js"></script>
+</div>
+</div>
+</body>
+</html>																	
+
+
+Process finished with exit code 0
